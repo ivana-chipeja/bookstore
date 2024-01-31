@@ -22,7 +22,7 @@ Basic features include:
 
 ## Flowchart
 
-![flowchart](C:\Users\ASUS\Downloads\python-bookstore-flowchart.png)
+![flowchart](python-bookstore-flowchart)
 
 
 ## Links and Resources
