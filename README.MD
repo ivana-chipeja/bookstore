@@ -22,7 +22,7 @@ Basic features include:
 
 ## Flowchart
 
-![flowchart](python-bookstore-flowchart)
+![flowchart](python-bookstore-flowchart.png)
 
 
 ## Links and Resources
