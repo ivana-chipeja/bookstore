@@ -1,3 +1,7 @@
+import admin
+import client
+import pprint
+
 
 print('''
       
@@ -16,55 +20,50 @@ print('''
 
 
 
-print("\tWelcome to your favourite bookstore! We are pleased to see you here!")
+print("\nWelcome to your favourite bookstore! We are pleased to see you here!\n")
 
 total_price = 0
 shipping_price = 0
-books_to_add = 0
-books_to_remove = 0
 shipping = 0
-address = ""
-book_list_name = [" "] #if list empty, say that there are no books
+ #if list empty, say that there are no books
 #add books list, print added books, print removed books, maybe create fucntions?
 #book name, author, year, price, quantity, for admin, print list of books, see quantity, etc
 
 #---------------- Main Menu ----------------------#
 
 
-client_or_admin = input("Are you a client or an admin?")
+client_or_admin = input("Are you a client or an admin? ").lower()
 
-client_or_admin.lower()
+
 
 
 #---------- Admin Menu -----------#
 
 
+if client_or_admin == "admin":  
+    
+    exit_admin = False 
+    
+    while not exit_admin: #while loop used to continue or exit 
+     
+        print("\t\t\t******     1. Add Books               ******")
+        print("\t\t\t******     2. Remove Books            ******")
+        print("\t\t\t******     3. List Books              ******")
+        print("\t\t\t******     4. See Bookstore Profits   ******")
 
-if client_or_admin == "admin":    
-    print("\t\t\t******     1. Add Books               ******")
-    print("\t\t\t******     2. Remove Books            ******")
-    print("\t\t\t******     3. List Books              ******")
-    print("\t\t\t******     4. See Bookstore Profits   ******")
-
-    option1_admin = input()
-
-    if option1_admin == "1":
-        #add books to list, print how many were adde and how many are left in inventory\
-        books_to_add = int(input("How many books would you like to add?"))
+        option1_admin = input()
+        should_continue = ""
+    
+        admin.admin_menu(option1_admin)
         
-        if books_to_add == 0:
-            print("No books to add!")
-        
-        elif books_to_add > 0:
-            print(f"You would like to add {books_to_add}")
+        should_continue = input("Want to continue or exit? ").lower()
             
+    if should_continue == "continue":
+        admin.admin_menu(option1_admin)
             
-            for books in range(0, books_to_add):
-                print()
-                 
-        else:
-            print("Invalid choice!")
-        
+    else:
+        exit_admin = True
+        print("Thank you!")
         
 
 #----------- Client Menu ---------#
@@ -73,12 +72,12 @@ if client_or_admin == "admin":
 elif client_or_admin == "client":
     print("\t\t\t******     1. Browse Books        ******")
     print("\t\t\t******     2. Buy Books           ******")
-    print("\t\t\t******     3. Return a Book       ******")
+    print("\t\t\t******     3. See Total           ******")
     
     option1_client = input()
     
     if option1_client == "1":
-        #list books
+        
         print()
     
     elif option1_client == "2":
@@ -98,4 +97,5 @@ elif client_or_admin == "client":
 
 
 else:
-    print("Invalid option!")
+  print("Invalid option!")
+  

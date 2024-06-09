@@ -1,3 +1,4 @@
+
 # Welcome to Python Bookstore
 
 We are pleased to have you here :smile:!
@@ -20,8 +21,6 @@ Basic features include:
 - Calculate the bookstore’s total profit
 - Calculate total + shipping
 - Offer free shipping when it reaches a certain value
-- Add book to inventory when returned
-- Subtract from the bookstore’s profits when a book is returned
 - Print receipt
 
 
@@ -31,10 +30,15 @@ Basic features include:
 
 
 ## Updates
+- Separated Client and Admin into two modules for better resability and organisation
+- Removed the return fucntion
+- Decided to use dictionaries and lists and add them to one list
+
 
 
 
 ## Links and Resources
 - [Twitter](https://twitter.com/v_chipeja)
 - [LinkedIn](https://www.linkedin.com/in/ivana-chipeja/)
+- [Day 14 Project: Reading List](https://teclado.com/30-days-of-python/python-30-day-14-project-regular/)
 
