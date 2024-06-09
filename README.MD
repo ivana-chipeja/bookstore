@@ -26,13 +26,14 @@ Basic features include:
 
 ## Flowchart
 
-![flowchart](python-bookstore-flowchart.png)
+![flowchart](python-bookstore-flowchart-updated.png)
 
 
 ## Updates
 - Separated Client and Admin into two modules for better resability and organisation
 - Removed the return fucntion
 - Decided to use dictionaries and lists and add them to one list
+- Updated the flowchart
 
 
 
