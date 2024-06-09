@@ -22,9 +22,7 @@ print('''
 
 print("\nWelcome to your favourite bookstore! We are pleased to see you here!\n")
 
-total_price = 0
-shipping_price = 0
-shipping = 0
+
  #if list empty, say that there are no books
 #add books list, print added books, print removed books, maybe create fucntions?
 #book name, author, year, price, quantity, for admin, print list of books, see quantity, etc
@@ -33,7 +31,7 @@ shipping = 0
 
 
 client_or_admin = input("Are you a client or an admin? ").lower()
-
+should_continue = ""
 
 
 
@@ -52,7 +50,6 @@ if client_or_admin == "admin":
         print("\t\t\t******     4. See Bookstore Profits   ******")
 
         option1_admin = input()
-        should_continue = ""
     
         admin.admin_menu(option1_admin)
         
@@ -70,27 +67,30 @@ if client_or_admin == "admin":
 
 
 elif client_or_admin == "client":
-    print("\t\t\t******     1. Browse Books        ******")
-    print("\t\t\t******     2. Buy Books           ******")
-    print("\t\t\t******     3. See Total           ******")
     
-    option1_client = input()
+    exit_client = False
     
-    if option1_client == "1":
+    while not exit_client:
         
-        print()
-    
-    elif option1_client == "2":
-        #list books and choose which number to buy, list the details and if buy, remove brom list and print receipt, there is none in inventory, print message
-        print()
+        print("\t\t\t******     Free shipping on orders above £60       ******\n")
+        print("\t\t\t******     1. Browse Books        ******")
+        print("\t\t\t******     2. Buy Books           ******")
+        print("\t\t\t******     3. See cart            ******")
         
-    elif option1_client == "3":
-        #return a book to list, print receipt, remove profits
-        print()
+        option1_client = input()
     
+        client.client_menu(option1_client)
+        
+        should_continue = input("Want to continue or exit? ").lower()
+            
+    if should_continue == "continue":
+        client.client_menu(option1_client)
+            
     else:
-        print("Invalid option")
+        exit_client = True
+        print("We hope to see you again!")
         
+            
         
     
 # --------------  else  -----------------# 

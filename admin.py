@@ -1,4 +1,5 @@
 import pprint
+import client
 
 books_list = []
 new_book = {}
@@ -20,27 +21,29 @@ def admin_menu(option):
             
     elif option == "4":
         print()
-
+        
 
 def add_books():
     
+    reference_number = int(input("Book reference number: "))
     title = input("Title: ")
     author = input("Author: ")
     publication_year = int(input("Publication year: "))
     price = float(input("Price: £"))
     quantity = int(input("Copies being added: "))
     
-    
+    new_book["Reference"] = reference_number
     new_book["Title"] = title
     new_book["Author"] = author
     new_book["Year: "] = publication_year
     new_book["Price"] = price
-    new_book["In stock"] = quantity
+    new_book["In stock"] = quantity 
     
 
 
 def list_books():
     pprint.pprint(books_list)
+    #if stock == 0, list as out of stock
     
 
 def remove_copies():
