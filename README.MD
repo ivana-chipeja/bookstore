@@ -17,7 +17,9 @@ This is a simple Python project, meant to help me develop my programming skills.
 Basic features include:
 
 - Add books to inventory
-- Remove book from inventory when purchased
+- List books
+- Remove books
+- Remove copy of a book when purchased (stock)
 - Calculate the bookstore’s total profit
 - Calculate total + shipping
 - Offer free shipping when it reaches a certain value
