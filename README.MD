@@ -30,9 +30,9 @@ Basic features include:
 
 
 ## Updates
-- Separated Client and Admin into two modules for better resability and organisation
+- Separated Client and Admin into two modules for better redability and organisation
 - Removed the return fucntion
-- Decided to use dictionaries and lists and add them to one list
+- Decided to use dictionaries and add them to a list
 - Updated the flowchart
 
 
