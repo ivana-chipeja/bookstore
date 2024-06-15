@@ -36,6 +36,7 @@ Basic features include:
 - Removed the return fucntion
 - Decided to use dictionaries and add them to a list
 - Updated the flowchart
+- Fixed the menu loop
 
 
 

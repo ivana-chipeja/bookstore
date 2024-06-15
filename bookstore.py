@@ -55,12 +55,13 @@ if client_or_admin == "admin":
         
         should_continue = input("Want to continue or exit? ").lower()
             
-    if should_continue == "continue":
-        admin.admin_menu(option1_admin)
+        if should_continue == "exit":
+            exit_admin = True
+            print("Thank you!")
             
-    else:
-        exit_admin = True
-        print("Thank you!")
+        else:
+            admin.admin_menu(option1_admin)
+            
         
 
 #----------- Client Menu ---------#
